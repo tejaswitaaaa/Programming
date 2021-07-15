@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+void fun(int x, int n){
+    if (x>n){
+    return;
+    }
+    if (x!=0){
+        cout<<x<<" ";
+    }
+    for(int i=(x==0)? 1:0; i<=9; i++){
+    fun(10*x+i, n);
+    }
+}
+int main (){
+    int n;
+    cin>>n;
+    fun(0,n);
+    return 0;
+}
